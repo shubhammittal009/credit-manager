@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ViewerList</title>
+    <style>
+        th {
+            font-family: 'Merriweather', serif;
+            font-size:30px;
+            padding:10px
+        }
+        td {
+            font-family: 'Merriweather', serif;
+            font-size:20px;
+            padding:10px
+        }
+
+        #1 {
+            font-family: 'Merriweather', serif;
+            font-size:15px;
+            padding:10px
+        }
+        body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("https://wahospitality.org/wp-content/uploads/2018/10/startsaving_withSafety_shutterstock_472360912.jpg");
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+        </style>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+
+
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div class="bg-text">
+    <h1 align="center" id="1"><i class="users icon"></i> USERS LIST</h1>
+    <table align="center" border="3"> 
+        <tr class="row">
+            <th>NAME</th>
+            <th> CREDITS</th>
+            <th>EmaiL-Id</th>
+        </tr>
+        {{#each results as |result|}}
+        <tr>
+            <td align="center">
+                <button class="ui active button" onclick="window.location.href = '/User/{{result.name}}';" style="text-decoration:none"><i class="user icon"></i>{{result.name}}</button>
+            </td>
+            <td align="center">{{result.Account_balance}}</td>
+            <td align="center">{{result.Email_id}}</td>
+        </tr>
+        {{/each}}
+    </table>
+    </div>
+</body>
+</html>
