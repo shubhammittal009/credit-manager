@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "faker": "^4.1.0",
     "hbs": "^4.0.4",
     "mongodb": "^3.2.4"
