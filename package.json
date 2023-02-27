@@ -11,7 +11,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "faker": "^4.1.0",
-    "hbs": "^4.0.4",
+    "hbs": "^4.2.0",
     "mongodb": "^3.2.4"
   }
 }
